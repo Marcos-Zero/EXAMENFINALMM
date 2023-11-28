@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <title>Ejercicio 1</title>
+</head>
+<body class="form__body1">
+
+    <form method="post" class="form__form1">
+        <h1 class="form__titulo1">Calculo de compras</h1>
+        <label for="nombre" class="form__p1">Ingresa tu nombre:</label>
+        <input type="text" id="nombre" class="form__boton1" name="nombre" value="{{ nombre }}" required>
+        <br>
+        <label for="edad" class="form__p1">Ingresa tu edad:</label>
+        <input type="number" id="edad" class="form__boton1" name="edad" required>
+        <br>
+        <label for="tarros_pintura" class="form__p3">Ingresa la cantidad de tarros de pintura a comprar:</label>
+        <input type="number" id="tarros_pintura" class="form__boton1" name="tarros_pintura" required>
+        <br>
+        <input type="submit" value="Calcular" class="form__calcular1">
+
+       <p>Nombre del cliente: {{ nombre }}</p>
+        <p>Total sin descuento: ${{ total_sin_descuento }}</p>
+        <p>El descuento es: {{ total_sin_descuento  * descuento}}</p>
+        <p>Total a pagar es de: ${{ total_con_descuento }}</p>
+ </form>
+
+</body>
+</html>
